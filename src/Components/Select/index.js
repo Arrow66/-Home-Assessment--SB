@@ -25,7 +25,7 @@ export const Select = ({
 
 
 export const StyledSelect = styled(Select)`
-    width: 100%;
+    width: 75%;
     padding: 0.5em 2em 0.5em 0.5em;
     font-size: 1em;
     border: none;
