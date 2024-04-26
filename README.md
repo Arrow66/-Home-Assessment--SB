@@ -1,3 +1,13 @@
+**Live Link**
+   https://arrow66.github.io/second-round-assessment/
+
+![Alt text](static/images/screenshot.PNG)
+
+**Test Coverage**
+
+![Alt text](static/images/coverage.PNG)
+
+
 Development Environment Guide
 1) create src folder
    copy App.js, index.html and index.js to src folder
