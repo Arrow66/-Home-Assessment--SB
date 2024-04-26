@@ -10,8 +10,7 @@ const StyledTable = styled.table`
 `;
 
 const TableBody = styled.tbody`
-
-`
+`;
 
 const TableHeader = styled.th`
     border: none;
