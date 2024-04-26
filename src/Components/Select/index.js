@@ -3,23 +3,28 @@ import styled from 'styled-components';
 
 
 
-const Select = ({
-    onChange, value, options,key, ...rest
+export const Select = ({
+    onChange, value, options,'aria-label': ariaLabel,
+    'aria-labelledby': ariaLabelledBy, ...rest
 }) => (
+    <div>
     <select onChange={onChange}
         value={value}
+        aria-label={ariaLabel}
+        aria-labelledby={ariaLabelledBy}
         {...rest}
     >
      {
         options.map((option)=>
-           ( <option value={option.value} key={key}>{option.label}</option>)
+           ( <option value={option.value} key={option.key}>{option.label}</option>)
         )
      }
     </select>
+    </div>
 )
 
 
-const StyledSelect = styled(Select)`
+export const StyledSelect = styled(Select)`
     width: 100%;
     padding: 0.5em 2em 0.5em 0.5em;
     font-size: 1em;

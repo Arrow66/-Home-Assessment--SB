@@ -11,20 +11,20 @@ const AccountTable = () => {
     const tableData = accounts[selectedAccount];
     const { docs } = tableData || {}
 
-    const TableRender = docs&&docs.map(({ document_type, is_paper_flag }) => (
-        <Table.Row>
-            <Table.Cell>{document_type}</Table.Cell>
-            <Table.Cell>{is_paper_flag ? "Paper" : "Paperless"}</Table.Cell>
+    const TableRender = docs && docs.map(({ document_type, is_paper_flag }) => (
+        <Table.Row key={document_type} data-testid="account-table-row" role="row">
+            <Table.Cell data-testid="document_type" role="cell">{document_type}</Table.Cell>
+            <Table.Cell data-testid="delivery-method" role="cell">{is_paper_flag ? "Paper" : "Paperless"}</Table.Cell>
         </Table.Row>
-    ))||[]
+    )) || []
 
     return (
-        <Table>
-            <Table.Header>
-                <Table.Column> Document Type</Table.Column>
-                <Table.Column>Delivery Method</Table.Column>
+        <Table data-testid="account-table" role="table" aria-label="Account Table">
+            <Table.Header data-testid="account-table-header" role="rowheader">
+                <Table.Column role="columnheader"> Document Type</Table.Column>
+                <Table.Column role="columnheader">Delivery Method</Table.Column>
             </Table.Header>
-            <Table.Body>
+            <Table.Body data-testid="account-table-body" role="rowgroup" aria-live="polite">
                 {
                     TableRender
                 }

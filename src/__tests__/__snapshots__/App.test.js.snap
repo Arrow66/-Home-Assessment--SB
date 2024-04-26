@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App should match snapshot 1`] = `
+<div
+  className="App"
+>
+  <header
+    className="App-header"
+  >
+    <h1
+      className="App-title"
+    >
+      Demo Account and Document Preference Delivery
+    </h1>
+  </header>
+  <main>
+    <div
+      className="container"
+    >
+      <div
+        className="sc-beySPh kIPIVA"
+      >
+        <select
+          className="sc-guDLey dsjNpr"
+          onChange={[Function]}
+          value=""
+        />
+      </div>
+      <div
+        className="sc-beySPh kIPIVA"
+      >
+        <table
+          className="sc-dmyCSP cqPXRW"
+          data-testid="account-table"
+          role="table"
+        >
+          <thead
+            className="sc-gLLuof iROQQU"
+            data-testid="account-table-header"
+          >
+            <tr
+              className="sc-jTQCzO cuqUkQ"
+              tabIndex={-1}
+            >
+              <th
+                className="sc-eDLKkx fBnpYM"
+              >
+                 Document Type
+              </th>
+              <th
+                className="sc-eDLKkx fBnpYM"
+              >
+                Delivery Method
+              </th>
+            </tr>
+          </thead>
+          <tbody
+            className="sc-hLQSwg hxVbwP"
+            data-testid="account-table-body"
+          />
+        </table>
+      </div>
+    </div>
+  </main>
+</div>
+`;

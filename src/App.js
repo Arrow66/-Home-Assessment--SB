@@ -1,10 +1,10 @@
-import React from 'react'
+import React,{lazy,Suspense} from 'react'
 import '../static/css/App.css'
 import Providers from './context/providers';
 import Header from './Components/Header';
 import Box from "./Components/Box";
-import AccountSelect from './Components/AccountSelect';
-import AccountTable from './Components/AccountTable';
+const  AccountSelect  = lazy(()=>import('./Components/AccountSelect'));
+const  AccountTable  =  lazy(()=>import('./Components/AccountTable'));
 
 const { AccountsProvider } = Providers;
 
@@ -14,13 +14,17 @@ const App = () => {
         <AccountsProvider>
             <div className='App'>
                 <Header />
-                <main>
+                <main role='main'>
                     <div className='container'>
-                        <Box>
+                        <Box role='region'>
+                            <Suspense fallback={<div>Loading...</div>}>
                             <AccountSelect />
+                            </Suspense>
                         </Box>
-                        <Box>
+                        <Box role="region" aria-label='Account Table'>
+                        <Suspense fallback={<div>Loading...</div>}>
                             <AccountTable />
+                        </Suspense>
                         </Box>
                     </div>
                 </main>

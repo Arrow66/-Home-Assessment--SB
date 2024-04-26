@@ -18,11 +18,13 @@ const AccountSelect = () => {
         }
     })
 
-    return <StyledSelect options={options} onChange={(e) => {
+    return (<StyledSelect options={options} onChange={(e) => {
         setSelectedAccountAction(dispatch, e.target.value)
     }}
+    id="account-select"
+    aria-labelledby="my-select-label"
         value={selectedAccount}
-    />
+    />)
 
 }
 

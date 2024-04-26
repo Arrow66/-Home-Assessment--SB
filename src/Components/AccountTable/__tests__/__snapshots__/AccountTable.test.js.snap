@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AccountTable should match snap 1`] = `
+<table
+  className="sc-beySPh dwkWpT"
+  data-testid="account-table"
+  role="table"
+>
+  <thead
+    className="sc-eDLKkx jQvHwW"
+    data-testid="account-table-header"
+  >
+    <tr
+      className="sc-hLQSwg fYZOnz"
+      tabIndex={-1}
+    >
+      <th
+        className="sc-dmyCSP cjlLNF"
+      >
+         Document Type
+      </th>
+      <th
+        className="sc-dmyCSP cjlLNF"
+      >
+        Delivery Method
+      </th>
+    </tr>
+  </thead>
+  <tbody
+    className="sc-guDLey cVtAAz"
+    data-testid="account-table-body"
+  >
+    <tr
+      className="sc-hLQSwg fYZOnz"
+      data-testid="account-table-row"
+      tabIndex={-1}
+    >
+      <td
+        align="left"
+        className="sc-jTQCzO iZOOrt"
+        data-testid="document_type"
+      >
+        doc1
+      </td>
+      <td
+        align="left"
+        className="sc-jTQCzO iZOOrt"
+        data-testid="delivery-method"
+      >
+        Paper
+      </td>
+    </tr>
+    <tr
+      className="sc-hLQSwg fYZOnz"
+      data-testid="account-table-row"
+      tabIndex={-1}
+    >
+      <td
+        align="left"
+        className="sc-jTQCzO iZOOrt"
+        data-testid="document_type"
+      >
+        doc2
+      </td>
+      <td
+        align="left"
+        className="sc-jTQCzO iZOOrt"
+        data-testid="delivery-method"
+      >
+        Paperless
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;

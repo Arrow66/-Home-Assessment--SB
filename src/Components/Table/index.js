@@ -60,7 +60,7 @@ const Header = ({children,...rest})=>{
     )
 }
   
-  const Cell = ({ children, ...rest }) => {
+  export const Cell = ({ children, ...rest }) => {
     return (
       <TableCell align="left" {...rest}>
         {children}
