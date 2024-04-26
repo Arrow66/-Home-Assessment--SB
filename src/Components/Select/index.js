@@ -29,7 +29,7 @@ export const StyledSelect = styled(Select)`
     padding: 0.5em 2em 0.5em 0.5em;
     font-size: 1em;
     border: none;
-    border-bottom: 1px solid #d9d9d9;
+    border-bottom: 1px solid blue;
     border-radius: 0;
     outline: none;
     box-shadow: none !important;
