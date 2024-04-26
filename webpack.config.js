@@ -18,16 +18,18 @@ module.exports = {
             {
                 test: /\.js$/,
                 include: path.resolve(__dirname, 'src'),
-                loader: 'babel-loader',
-                options: { presets: ['react', 'env']}
+                use: {
+                    loader: 'babel-loader',
+                    options: { presets: ['react', 'env'], plugins: ["transform-object-rest-spread"] }
+                }
             },
             {
                 test: /\.css$/,
-                use: [ 'style-loader', 'css-loader' ]
+                use: ['style-loader', 'css-loader']
             },
             {
                 test: /\.svg$/,
-                use: [ 'file-loader' ]
+                use: ['file-loader']
             }
         ]
     }

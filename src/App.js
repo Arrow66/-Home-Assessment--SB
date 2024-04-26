@@ -1,20 +1,33 @@
-import React, { Component } from 'react'
-import logo from '../static/images/logo.svg'
+import React from 'react'
 import '../static/css/App.css'
+import Providers from './context/providers';
+import Header from './Components/Header';
+import Box from "./Components/Box";
+import AccountSelect from './Components/AccountSelect';
+import AccountTable from './Components/AccountTable';
 
-class App extends Component {
-    render() {
-        return (
-            <div className="App">
-                <header className="App-header">
-                    <h1 className="App-title">Welcome to React</h1>
-                </header>
-                <p className="App-intro">
-                    Please start your design and development
-                </p>
+const { AccountsProvider } = Providers;
+
+const App = () => {
+
+    return (
+        <AccountsProvider>
+            <div className='App'>
+                <Header />
+                <main>
+                    <div className='container'>
+                        <Box>
+                            <AccountSelect />
+                        </Box>
+                        <Box>
+                            <AccountTable />
+                        </Box>
+                    </div>
+                </main>
             </div>
-        )
-    }
+        </AccountsProvider>
+    )
 }
+
 
 export default App;

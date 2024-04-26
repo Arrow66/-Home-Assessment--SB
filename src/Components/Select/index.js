@@ -4,22 +4,17 @@ import styled from 'styled-components';
 
 
 const Select = ({
-    onChange, value, options, ...rest
+    onChange, value, options,key, ...rest
 }) => (
     <select onChange={onChange}
         value={value}
-        aria-describedby="account_description"
         {...rest}
     >
-        <option value="" disabled id='account_description'>Select and Account </option>
-        {
-            Object.entries(options).map((option) => (
-                <option value={option[0]} key={option[0]}>
-                    {option[1].accountName}
-                </option>
-            ))
-
-        }
+     {
+        options.map((option)=>
+           ( <option value={option.value} key={key}>{option.label}</option>)
+        )
+     }
     </select>
 )
 
@@ -32,9 +27,12 @@ const StyledSelect = styled(Select)`
     border-bottom: 1px solid #d9d9d9;
     border-radius: 0;
     outline: none;
-    box-shadow: none;
+    box-shadow: none !important;
     height: 50px;
     overflow-y: scroll;
+    input:-webkit-autofill {
+        background: #fff !important;
+    }
 `;
 
 
