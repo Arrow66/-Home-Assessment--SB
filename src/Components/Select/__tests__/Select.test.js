@@ -1,6 +1,6 @@
+import { shallow } from 'enzyme';
 import React from 'react';
-import { shallow, mount } from 'enzyme';
-import {StyledSelect,Select} from '..';
+import { Select } from '..';
 describe('Select component', () => {
   const options = [
     { value: 'option1', label: 'Option 1', key: 1 },

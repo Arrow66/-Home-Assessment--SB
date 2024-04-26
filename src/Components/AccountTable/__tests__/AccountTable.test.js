@@ -1,8 +1,8 @@
+import { mount } from 'enzyme';
 import React from 'react';
-import { shallow, mount } from 'enzyme';
-import { accountsContext } from '../../../context';
+import renderer from "react-test-renderer";
 import AccountTable from '..';
-import renderer from "react-test-renderer"
+import { accountsContext } from '../../../context';
 
 
 describe('AccountTable', () => {

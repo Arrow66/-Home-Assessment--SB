@@ -1,7 +1,7 @@
 import AccountSelect from "..";
 
+import { mount } from 'enzyme';
 import React from 'react';
-import { mount, shallow } from 'enzyme';
 import { accountsContext } from "../../../context";
 import StyledSelect from "../../Select";
 
