@@ -2,10 +2,11 @@ const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
-    entry: ['babel-polyfill', path.resolve(__dirname, 'src', 'index.js')],
+    entry: [path.resolve(__dirname, 'src', 'index.js')],
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'bundle.js'
+        filename: '[name].[contenthash].js',
+        chunkFilename: '[name].[contenthash].js'
     },
     plugins: [
         new HtmlWebpackPlugin({
@@ -20,7 +21,7 @@ module.exports = {
                 include: path.resolve(__dirname, 'src'),
                 use: {
                     loader: 'babel-loader',
-                    options: { presets: ['react', 'env'], plugins: ["transform-object-rest-spread","@babel/plugin-syntax-dynamic-import"] }
+                    options: { presets: ['@babel/preset-env', '@babel/preset-react'] }
                 }
             },
             {
@@ -32,5 +33,11 @@ module.exports = {
                 use: ['file-loader']
             }
         ]
-    }
+    },
+    optimization: {
+        splitChunks: {
+          chunks: 'all',
+          minSize: 0, // Set to 0 to enforce splitting regardless of size
+        },
+      }
 }

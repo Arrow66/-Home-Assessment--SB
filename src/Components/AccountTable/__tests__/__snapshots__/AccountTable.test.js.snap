@@ -2,6 +2,7 @@
 
 exports[`AccountTable should match snap 1`] = `
 <table
+  aria-label="Account Table"
   className="sc-beySPh dwkWpT"
   data-testid="account-table"
   role="table"
@@ -9,6 +10,7 @@ exports[`AccountTable should match snap 1`] = `
   <thead
     className="sc-eDLKkx jQvHwW"
     data-testid="account-table-header"
+    role="rowheader"
   >
     <tr
       className="sc-hLQSwg fYZOnz"
@@ -16,29 +18,35 @@ exports[`AccountTable should match snap 1`] = `
     >
       <th
         className="sc-dmyCSP cjlLNF"
+        role="columnheader"
       >
          Document Type
       </th>
       <th
         className="sc-dmyCSP cjlLNF"
+        role="columnheader"
       >
         Delivery Method
       </th>
     </tr>
   </thead>
   <tbody
+    aria-live="polite"
     className="sc-guDLey cVtAAz"
     data-testid="account-table-body"
+    role="rowgroup"
   >
     <tr
       className="sc-hLQSwg fYZOnz"
       data-testid="account-table-row"
+      role="row"
       tabIndex={-1}
     >
       <td
         align="left"
         className="sc-jTQCzO iZOOrt"
         data-testid="document_type"
+        role="cell"
       >
         doc1
       </td>
@@ -46,6 +54,7 @@ exports[`AccountTable should match snap 1`] = `
         align="left"
         className="sc-jTQCzO iZOOrt"
         data-testid="delivery-method"
+        role="cell"
       >
         Paper
       </td>
@@ -53,12 +62,14 @@ exports[`AccountTable should match snap 1`] = `
     <tr
       className="sc-hLQSwg fYZOnz"
       data-testid="account-table-row"
+      role="row"
       tabIndex={-1}
     >
       <td
         align="left"
         className="sc-jTQCzO iZOOrt"
         data-testid="document_type"
+        role="cell"
       >
         doc2
       </td>
@@ -66,6 +77,7 @@ exports[`AccountTable should match snap 1`] = `
         align="left"
         className="sc-jTQCzO iZOOrt"
         data-testid="delivery-method"
+        role="cell"
       >
         Paperless
       </td>

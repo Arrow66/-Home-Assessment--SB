@@ -6,59 +6,37 @@ exports[`App should match snapshot 1`] = `
 >
   <header
     className="App-header"
+    role="banner"
   >
     <h1
       className="App-title"
+      id="main-heading"
     >
       Demo Account and Document Preference Delivery
     </h1>
   </header>
-  <main>
+  <main
+    role="main"
+  >
     <div
       className="container"
     >
       <div
         className="sc-beySPh kIPIVA"
+        role="region"
       >
-        <select
-          className="sc-guDLey dsjNpr"
-          onChange={[Function]}
-          value=""
-        />
+        <div>
+          Loading...
+        </div>
       </div>
       <div
+        aria-label="Account Table"
         className="sc-beySPh kIPIVA"
+        role="region"
       >
-        <table
-          className="sc-dmyCSP cqPXRW"
-          data-testid="account-table"
-          role="table"
-        >
-          <thead
-            className="sc-gLLuof iROQQU"
-            data-testid="account-table-header"
-          >
-            <tr
-              className="sc-jTQCzO cuqUkQ"
-              tabIndex={-1}
-            >
-              <th
-                className="sc-eDLKkx fBnpYM"
-              >
-                 Document Type
-              </th>
-              <th
-                className="sc-eDLKkx fBnpYM"
-              >
-                Delivery Method
-              </th>
-            </tr>
-          </thead>
-          <tbody
-            className="sc-hLQSwg hxVbwP"
-            data-testid="account-table-body"
-          />
-        </table>
+        <div>
+          Loading...
+        </div>
       </div>
     </div>
   </main>

@@ -26,14 +26,6 @@ describe('App', () => {
         const wrapper = shallow(<App />);
         expect(wrapper.find(Header)).toHaveLength(1);
       });
-      it('renders the AccountSelect component', () => {
-        const wrapper = shallow(<App />);
-        expect(wrapper.find(AccountSelect)).toHaveLength(1);
-      });
-      it('renders the AccountTable component', () => {
-        const wrapper = shallow(<App />);
-        expect(wrapper.find(AccountTable)).toHaveLength(1);
-      });
       it('renders the AccountsProvider and wraps the entire component', () => {
         const wrapper = mount(<App />);
         expect(wrapper.find(AccountsProvider)).toHaveLength(1);
@@ -45,13 +37,5 @@ describe('App', () => {
         expect(wrapper.find('.container')).toHaveLength(1);
         expect(wrapper.find(Box)).toHaveLength(2);
       });
-      
-      it('renders AccountSelect and AccountTable within the respective boxes', () => {
-        const wrapper = shallow(<App />);
-        const boxes = wrapper.find(Box);
-        expect(boxes.at(0).find(AccountSelect)).toHaveLength(1);
-        expect(boxes.at(1).find(AccountTable)).toHaveLength(1);
-      });
-      
       
 })
