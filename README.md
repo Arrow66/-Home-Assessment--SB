@@ -3,6 +3,11 @@
 
 ![Alt text](static/images/screenshot.PNG)
 
+**Mobile View**
+
+![Alt text](<static/images/mobile screen.jpg>)
+
+
 **Test Coverage**
 
 ![Alt text](static/images/coverage.PNG)
